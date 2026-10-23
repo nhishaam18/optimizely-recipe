@@ -1,0 +1,15 @@
+{
+  "recipeVersion": "1.5.2",
+  "note": "Fill actual IDs at intake and expansion. Instruction-level prerequisite map, not native scheduler enforcement.",
+  "phase3Expanded": false,
+  "assemblyAccepted": false,
+  "tasks": [],
+  "approvals": [],
+  "executionAuthorization": {
+    "authorizedPhaseIds": [],
+    "authorizedTaskIds": [],
+    "userStartReference": null,
+    "status": "awaiting-start",
+    "note": "Empty task IDs do not narrow an explicitly authorized phase. Empty phase IDs grant no phase execution. Artifact approvals remain separate."
+  }
+}

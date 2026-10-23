@@ -1,0 +1,174 @@
+{
+  "contentTypes": [
+    {
+      "displayName": "Card",
+      "baseType": "_component",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "isRequired": true,
+          "isLocalized": true,
+          "maxLength": 120
+        },
+        "image": {
+          "type": "contentReference",
+          "allowedTypes": [
+            "_image"
+          ]
+        },
+        "imageAlt": {
+          "type": "string",
+          "isLocalized": true
+        },
+        "destination": {
+          "type": "link",
+          "isLocalized": true
+        }
+      },
+      "key": "MigrationCard"
+    },
+    {
+      "displayName": "Cards section",
+      "baseType": "_component",
+      "compositionBehaviors": [
+        "sectionEnabled"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "isLocalized": true
+        },
+        "cards": {
+          "type": "array",
+          "isRequired": true,
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "type": "component",
+            "contentType": "MigrationCard"
+          }
+        }
+      },
+      "key": "MigrationCards"
+    },
+    {
+      "displayName": "Hero section",
+      "baseType": "_component",
+      "compositionBehaviors": [
+        "sectionEnabled"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "isRequired": true,
+          "isLocalized": true,
+          "maxLength": 120
+        },
+        "body": {
+          "type": "richText",
+          "isLocalized": true,
+          "editorSettings": {
+            "preset": "minimal"
+          }
+        },
+        "image": {
+          "type": "contentReference",
+          "allowedTypes": [
+            "_image"
+          ]
+        },
+        "imageAlt": {
+          "type": "string",
+          "isLocalized": true
+        },
+        "ctaLabel": {
+          "type": "string",
+          "isLocalized": true
+        },
+        "ctaUrl": {
+          "type": "url",
+          "isLocalized": true
+        }
+      },
+      "key": "MigrationHero"
+    },
+    {
+      "displayName": "Landing experience",
+      "baseType": "_experience",
+      "properties": {
+        "seoTitle": {
+          "type": "string",
+          "isLocalized": true,
+          "maxLength": 70,
+          "group": "seo"
+        },
+        "seoDescription": {
+          "type": "string",
+          "isLocalized": true,
+          "maxLength": 180,
+          "group": "seo"
+        },
+        "title": {
+          "type": "string",
+          "isRequired": true,
+          "isLocalized": true
+        }
+      },
+      "key": "MigrationLanding",
+      "contracts": [
+        "MigrationSeo"
+      ]
+    },
+    {
+      "key": "MigrationSeo",
+      "displayName": "SEO fields",
+      "isContract": true,
+      "properties": {
+        "seoTitle": {
+          "type": "string",
+          "isLocalized": true,
+          "maxLength": 70,
+          "group": "seo"
+        },
+        "seoDescription": {
+          "type": "string",
+          "isLocalized": true,
+          "maxLength": 180,
+          "group": "seo"
+        }
+      }
+    }
+  ],
+  "displayTemplates": [
+    {
+      "key": "MigrationHeroDisplay",
+      "displayName": "Hero appearance",
+      "contentType": "MigrationHero",
+      "isDefault": true,
+      "settings": {
+        "theme": {
+          "editor": "select",
+          "displayName": "Theme",
+          "sortOrder": 0,
+          "choices": {
+            "light": {
+              "displayName": "Light",
+              "sortOrder": 0
+            },
+            "dark": {
+              "displayName": "Dark",
+              "sortOrder": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "propertyGroups": [
+    {
+      "key": "seo",
+      "displayName": "SEO",
+      "sortOrder": 10
+    }
+  ]
+}

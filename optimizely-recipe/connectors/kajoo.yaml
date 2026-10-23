@@ -1,0 +1,4 @@
+name: kajoo
+type: mcp-kajoo
+description: Generic Kajoo workspace, task, artifact, skill and agent coordination tools.
+status: connected

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "recipeVersion": "1.3.3",
+  "projectId": null,
+  "workspaceId": null,
+  "target": "CMS-SaaS",
+  "phase": 0,
+  "agentIds": {
+    "Orchestrator": null,
+    "Developer": null,
+    "QA": null
+  },
+  "source": {
+    "url": null,
+    "scope": null,
+    "screenshots": []
+  },
+  "repository": {
+    "url": null,
+    "branch": null,
+    "commit": null,
+    "sdkFamily": null,
+    "versionManifest": null
+  },
+  "environment": {
+    "tenant": null,
+    "application": null,
+    "host": null,
+    "credentialReadiness": "unknown"
+  },
+  "phases": [],
+  "tasks": [],
+  "discoveryRevision": null,
+  "approvals": [],
+  "authorizations": [],
+  "sourceToTargetMap": null,
+  "artifacts": [],
+  "releases": [],
+  "openDefects": [],
+  "blockers": [],
+  "acceptance": {
+    "qa": "not-run",
+    "user": "not-requested",
+    "messageReference": null
+  },
+  "entryMode": "full-migration",
+  "implementationCheckpoint": null
+}
